@@ -8,21 +8,20 @@
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		
-		<title>Club Deportivo La Venta</title>
+		<title>Taller</title>
 	</head>
 	<body>
 		<?php
-			$id = $_POST['id'];
-			$nombre = $_POST['nombre'];
-			$telefono = $_POST['telefono'];
-			$fecha = $_POST['fecha'];
-			$categoria = $_POST['categoria'];
+			// $id = $_POST['id'];
+			$Nombre_cliente = $_POST['Nombre_cliente'];
+			$Telefono = $_POST['Telefono'];
+			$Correo = $_POST['Correo'];
 
 			//Establezco conexión
 			require 'conexion.php';
 
 			//Preparo la sentencia SQL
-			$sql = "UPDATE clubdeportivo SET nombre='$nombre', telefono='$telefono', fecha_nacimiento='$fecha', categoria='$categoria' WHERE id=$id";
+			$sql = "UPDATE cliente SET Nombre_cliente='$Nombre_cliente', Telefono='$Telefono', Correo='$Correo' WHERE id=$id";
 
 			//Ejecutamos sentencia y guardamos resultado
 			$resultado = $mysqli->query($sql);

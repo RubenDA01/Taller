@@ -1,10 +1,10 @@
 <?php
-	$id_cliente=$_GET['id_cliente'];
+	$id=$_GET['id'];
 	//Establezco conexión
 	require 'conexion.php';
 	
 	//Preparo la sentencia SQL
-	$sql = "SELECT * FROM clientes WHERE id_cliente=$id_cliente";
+	$sql = "SELECT * FROM cliente WHERE id_cliente=$id";
 
 	//Ejecuto la sentencia y guardo el resultado
 	$resultado = $mysqli->query($sql);
@@ -37,24 +37,17 @@
 					<form id="registro" name="registro" autocomplete="off" action="editar2.php" method="post">
 						<!-- Incluir el id en algún div de estos-->
 						<div class="form-group">
-							<!-- Nombre  -->
-							<input type="hidden" name="id" value="<?php echo $id; ?>">
-							<label for="nombre">Nombre</label>
-							<input type="text" name="nombre" id="nombre" class="form-control" placeholder="Introduce el nombre" value="<?php echo $fila['nombre']; ?>" required>
-						</div>
-
-						<div class="form-group">
 							<!-- Nombre -->
 							<label for="nombre">Nombre</label>
-							<input type="text" name="Nombre_cliente" id="Nombre_cliente" class="form-control" placeholder="Introduce el nombre" value="<?php echo $fila['Nombre_cliente']; ?>" required>
+							<input type="text" name="Nombre_cliente" id="Nombre_cliente" class="form-control" placeholder="Introduce el nombre" required>
 						</div>
-
+						
 						<div class="form-group">
 							<!-- Nombre -->
 							<label for="nombre">Teléfono</label>
 							<input type="number" name="Telefono" id="Telefono" class="form-control" placeholder="Introduce el teléfono" required>
 						</div>
-
+						
 						<div class="form-group">
 							<!-- Nombre -->
 							<label for="nombre">Correo</label>

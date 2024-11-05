@@ -12,7 +12,7 @@
 	</head>
 	<body>
 		<?php
-			$id = $_GET['id'];
+			$id = $_GET['id_cliente'];
 
 			//Establezco conexión
 			require 'conexion.php';

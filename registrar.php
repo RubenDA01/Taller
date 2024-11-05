@@ -19,7 +19,7 @@
 			<div class="row">
 				<div class="col-md-8">
 					<!-- Completar atributos de form -->
-					<form action="registrar2.php" id="registro" name="registro" autocomplete="off" method="post">
+					<form action="registrar2.php" id="registro" name="registro" autocomplete="off" method="get">
 						<!-- <div class="form-group"> -->
 							<!-- Nombre -->
 							<!-- <label for="nombre">Id Cliente</label>

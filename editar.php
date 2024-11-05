@@ -1,5 +1,5 @@
 <?php
-	$id=$_GET['id'];
+	$id = $_GET['id_cliente'];
 	//Establezco conexión
 	require 'conexion.php';
 	
@@ -34,10 +34,12 @@
 			<div class="row">
 				<div class="col-md-8">
 					<!-- Completar atributos de form -->
-					<form id="registro" name="registro" autocomplete="off" action="editar2.php" method="post">
+					<form id="registro" name="registro" autocomplete="off" action="editar2.php" method="get">
 						<!-- Incluir el id en algún div de estos-->
+
 						<div class="form-group">
 							<!-- Nombre -->
+							<input type="hidden" name="id_cliente" id="id_cliente" value="<?php echo $id; ?>">
 							<label for="nombre">Nombre</label>
 							<input type="text" name="Nombre_cliente" id="Nombre_cliente" class="form-control" placeholder="Introduce el nombre" required>
 						</div>

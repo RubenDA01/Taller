@@ -12,16 +12,16 @@
 	</head>
 	<body>
 		<?php
-			// $id = $_POST['id'];
-			$Nombre_cliente = $_POST['Nombre_cliente'];
-			$Telefono = $_POST['Telefono'];
-			$Correo = $_POST['Correo'];
+			$id = $_GET['id_cliente'];
+			$Nombre_cliente = $_GET['Nombre_cliente'];
+			$Telefono = $_GET['Telefono'];
+			$Correo = $_GET['Correo'];
 
 			//Establezco conexión
 			require 'conexion.php';
 
 			//Preparo la sentencia SQL
-			$sql = "UPDATE cliente SET Nombre_cliente='$Nombre_cliente', Telefono='$Telefono', Correo='$Correo' WHERE id=$id";
+			$sql = "UPDATE cliente SET Nombre_cliente='$Nombre_cliente', Telefono='$Telefono', Correo='$Correo' WHERE id_cliente=$id";
 
 			//Ejecutamos sentencia y guardamos resultado
 			$resultado = $mysqli->query($sql);

@@ -12,9 +12,9 @@
 	</head>
 	<body>
 		<?php
-			$Nombre_cliente = $_POST['Nombre_cliente'];
-			$Telefono = $_POST['Telefono'];
-			$Correo = $_POST['Correo'];
+			$Nombre_cliente = $_GET['Nombre_cliente'];
+			$Telefono = $_GET['Telefono'];
+			$Correo = $_GET['Correo'];
 			// $id_cliente = $_POST['id_cliente'];
 			
 			//Establezco conexión

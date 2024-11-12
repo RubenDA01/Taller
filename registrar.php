@@ -35,16 +35,7 @@
 						<div class="form-group">
 							<!-- Teléfono -->
 							<label for="Telefono">Teléfono</label>
-							<input 
-								type="text" 
-								name="Telefono" 
-								id="Telefono" 
-								class="form-control" 
-								placeholder="Introduce el teléfono" 
-								maxlength="9" 
-								pattern="\d{9}" 
-								required
-							>
+							<input type="text" name="Telefono" id="Telefono" class="form-control" placeholder="Introduce el teléfono" maxlength="9" pattern="\d{9}" required>
 						</div>
 						
 						<div class="form-group">

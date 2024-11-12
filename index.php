@@ -44,7 +44,7 @@ $resultado = $mysqli->query($sql);
 			<br>
 			
 			<div class="row">
-				<a href="registrar.php" class="btn btn-primary">Registrar</a>
+				<a href="registrar.php" class="btn btn-primary">Registrar Cliente</a>
 			</div>
 			<br>
 			<br>

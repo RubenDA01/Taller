@@ -31,11 +31,20 @@
 							<label for="nombre">Nombre</label>
 							<input type="text" name="Nombre_cliente" id="Nombre_cliente" class="form-control" placeholder="Introduce el nombre" required>
 						</div>
-						
+						<!-- Este es el campo de entrada para el número de teléfono, solo acepta 9 dígitos con el pattern -->
 						<div class="form-group">
-							<!-- Nombre -->
-							<label for="nombre">Teléfono</label>
-							<input type="number" name="Telefono" id="Telefono" class="form-control" placeholder="Introduce el teléfono" required>
+							<!-- Teléfono -->
+							<label for="Telefono">Teléfono</label>
+							<input 
+								type="text" 
+								name="Telefono" 
+								id="Telefono" 
+								class="form-control" 
+								placeholder="Introduce el teléfono" 
+								maxlength="9" 
+								pattern="\d{9}" 
+								required
+							>
 						</div>
 						
 						<div class="form-group">

@@ -48,8 +48,8 @@ $fila = $resultado->fetch_assoc();
                     <!-- Campo para el teléfono -->
                     <div class="form-group">
                         <label for="Telefono">Teléfono</label>
-                        <input type="number" name="Telefono" id="Telefono" class="form-control" 
-                               placeholder="Introduce el teléfono" required value="<?php echo $fila['Telefono']; ?>">
+                        <input type="text" name="Telefono" id="Telefono" class="form-control" 
+                               placeholder="Introduce el teléfono" maxlength="9" pattern="\d{9}"  required value="<?php echo $fila['Telefono']; ?>">
                     </div>
 
                     <!-- Campo para el correo -->

@@ -40,12 +40,12 @@
                     
                     <div class="form-group">
                         <label for="Año">Año</label>
-                        <input type="number" name="Año" id="Año" class="form-control" placeholder="Introduce el año" maxlength="4" required>
+                        <input type="text" name="Año" id="Año" class="form-control" placeholder="Introduce el año" maxlength="4" pattern="\d{4}" required>
                     </div>
 
                     <div class="form-group">
                         <label for="Matricula">Matrícula</label>
-                        <input type="text" name="Matricula" id="Matricula" class="form-control" placeholder="Introduce la matrícula" required>
+                        <input type="text" name="Matricula" id="Matricula" class="form-control" placeholder="Introduce la matrícula" pattern="^\d{4}[A-Za-z]{3}$" maxlength="7" required>
                     </div>
                     
                     <div class="form-group">

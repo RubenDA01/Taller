@@ -4,6 +4,7 @@ require 'conexion.php';
 
 // Verifica si se ha pasado un id_coche en la URL
 $id_coche = $_GET['id_coche'] ?? '';  // Si no hay id_coche, lo deja vacío
+$id_cliente = $_GET['id_cliente'] ?? '';  // Recupera el id_cliente de la URL si existe
 
 // Si id_coche es válido, realiza la consulta filtrada
 if ($id_coche) {
@@ -88,7 +89,8 @@ if ($id_coche) {
         </table>
         
         <div class="row mt-4">
-            <a href="index.php" class="btn btn-secondary">Volver a Inicio</a>
+            <!-- Aquí pasamos el id_cliente para que se filtren los coches correctamente al volver -->
+            <a href="coche.php?id_cliente=<?php echo $id_cliente; ?>" class="btn btn-secondary">Volver a Coche</a>
         </div>
 
     </div>

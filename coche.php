@@ -81,7 +81,7 @@ if ($id_cliente) {
                         echo "<td>{$fila['Matricula']}</td>";
                 ?>
                         <td><a href="servicio.php?id_cliente=<?php echo $fila['id_cliente']; ?>" class="btn btn-primary">Servicio</a></td>
-                        <td><a href="editarcoche.php?id_coche=<?php echo $fila['id_coche']; ?>" class="btn btn-warning">Editar</a></td>
+                        <td><a href="editarcoche.php?id_coche=<?php echo $fila['id_coche']; ?>&id_cliente=<?php echo $id_cliente; ?>" class="btn btn-warning">Editar</a></td>
                         <td><a href="eliminarcoche.php?id_coche=<?php echo $fila['id_coche']; ?>&id_cliente=<?php echo $id_cliente; ?>" class="btn btn-danger">Eliminar</a></td>
 
                 <?php

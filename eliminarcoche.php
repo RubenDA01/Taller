@@ -13,6 +13,7 @@
 	<body>
 		<?php
 			$id_coche = $_GET['id_coche'];
+			$id_cliente = $_GET['id_cliente'];
 
 			//Establezco conexión
 			require 'conexion.php';
@@ -36,7 +37,7 @@
 			}
 		?>
 			<br>
-			<p><a href="index.php" class="btn btn-primary">Regresar</a></p>
+			<p><a href="coche.php?id_cliente=<?php echo $id_cliente; ?>" class="btn btn-primary">Regresar</a></p>
 
 	</body>
 </html>

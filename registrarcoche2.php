@@ -43,7 +43,7 @@
         }
     ?>
     <br>
-    <p><a href="index.php" class="btn btn-primary">Regresar</a></p>
+    <!-- Enlace para regresar a la lista de coches del cliente actual -->
+    <p><a href="coche.php?id_cliente=<?php echo $id_cliente; ?>" class="btn btn-primary">Regresar</a></p>
 </body>
 </html>
-

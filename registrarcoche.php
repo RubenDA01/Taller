@@ -40,7 +40,7 @@
                     
                     <div class="form-group">
                         <label for="Año">Año</label>
-                        <input type="number" name="Año" id="Año" class="form-control" placeholder="Introduce el año" required>
+                        <input type="number" name="Año" id="Año" class="form-control" placeholder="Introduce el año" maxlength="4" required>
                     </div>
 
                     <div class="form-group">
@@ -61,5 +61,3 @@
     <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
-
-

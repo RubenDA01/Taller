@@ -36,7 +36,7 @@
 			}
 		?>
 			<br>
-			<p><a href="coche.php" class="btn btn-primary">Regresar</a></p>
+			<p><a href="index.php" class="btn btn-primary">Regresar</a></p>
 
 	</body>
 </html>

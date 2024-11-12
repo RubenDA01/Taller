@@ -1,45 +1,47 @@
 <!doctype html>
 <html lang="es">
-	<head>
-		<!-- Required meta tags -->
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		
-		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-		
-		<title>Taller</title>
-	</head>
-	<body>
-		<?php
-			$id = $_GET['id_cliente'];
-			$Nombre_cliente = $_GET['Nombre_cliente'];
-			$Telefono = $_GET['Telefono'];
-			$Correo = $_GET['Correo'];
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <title>Taller</title>
+</head>
+<body>
+    <?php
+    // Verificar si los datos han sido enviados a través de GET
+    if (isset($_GET['id_cliente']) && isset($_GET['Nombre_cliente']) && isset($_GET['Telefono']) && isset($_GET['Correo'])) {
+        $id = $_GET['id_cliente'];          // Obtener el id del cliente
+        $Nombre_cliente = $_GET['Nombre_cliente'];  // Obtener el nombre
+        $Telefono = $_GET['Telefono'];            // Obtener el teléfono
+        $Correo = $_GET['Correo'];               // Obtener el correo
 
-			//Establezco conexión
-			require 'conexion.php';
+        // Establecer la conexión
+        require 'conexion.php';
 
-			//Preparo la sentencia SQL
-			$sql = "UPDATE cliente SET Nombre_cliente='$Nombre_cliente', Telefono='$Telefono', Correo='$Correo' WHERE id_cliente=$id";
+        // Preparar la sentencia SQL para la actualización
+        $sql = "UPDATE cliente SET Nombre_cliente='$Nombre_cliente', Telefono='$Telefono', Correo='$Correo' WHERE id_cliente=$id";
 
-			//Ejecutamos sentencia y guardamos resultado
-			$resultado = $mysqli->query($sql);
+        // Ejecutar la sentencia
+        if ($mysqli->query($sql) === TRUE) {
+            echo '<br><p class="alert alert-primary">REGISTRO MODIFICADO</p>';
+        } else {
+            echo '<br><p class="alert alert-danger">ERROR AL MODIFICAR EL REGISTRO</p>';
+        }
+    } else {
+        echo '<br><p class="alert alert-danger">Faltan datos para actualizar el registro</p>';
+    }
+    ?>
 
-			if($resultado>0){
-		?>
-				<br>
-				<p class="alert alert-primary">REGISTRO MODIFICADO</p>
-		<?php
-			} else {
-		?>
-				<br>
-  				<p class="alert alert-danger">REGISTRO NO MODIFICADO</p>
-		<?php
-			}
-		?>
-			<br>
-			<p><a href="index.php" class="btn btn-primary">Regresar</a></p>
-	</body>
+    <br>
+    <p><a href="index.php" class="btn btn-primary">Regresar</a></p>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
 </html>
-

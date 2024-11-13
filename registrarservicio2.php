@@ -17,6 +17,7 @@
         $Precio = $_GET['Precio'];
         $Fecha = $_GET['Fecha'];
         $id_coche = $_GET['id_coche'];
+        $id_cliente = $_GET['id_cliente'];
 
         // Establezco conexión
         require 'conexion.php';
@@ -44,6 +45,6 @@
     ?>
     <br>
     <!-- Enlace para regresar a la lista de servicios del coche actual -->
-    <p><a href="servicio.php?id_coche=<?php echo $id_coche; ?>" class="btn btn-primary">Regresar</a></p>
+    <p><a href="servicio.php?id_coche=<?php echo $id_coche; ?>&id_cliente=<?php echo $id_cliente; ?>" class="btn btn-primary">Regresar</a></p>
 </body>
 </html>

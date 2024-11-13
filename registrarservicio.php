@@ -12,8 +12,9 @@
 </head>
 <body>
     <?php
-        // Obtener id_coche desde GET o establecerlo vacío si no está presente
+        // Obtener id_coche y id_cliente desde GET o establecerlo vacío si no está presente
         $id_coche = isset($_GET['id_coche']) ? htmlspecialchars($_GET['id_coche']) : '';
+        $id_cliente = isset($_GET['id_cliente']) ? htmlspecialchars($_GET['id_cliente']) : '';
     ?>
     
     <div class="container">
@@ -27,6 +28,7 @@
                     
                     <!-- Campo oculto para enviar el ID del coche -->
                     <input type="hidden" name="id_coche" value="<?php echo $id_coche; ?>">
+                    <input type="hidden" name="id_cliente" value="<?php echo $id_cliente; ?>">
 
                     <div class="form-group">
                         <label for="Tipo_Servicio">Tipo de Servicio</label>

@@ -53,7 +53,7 @@ if ($id_coche) {
         
         <div class="row">
             <!-- El enlace de Registrar pasa el id_coche en la URL -->
-            <a href="registrarservicio.php?id_coche=<?php echo $id_coche; ?>" class="btn btn-primary">Registrar Servicio</a>
+            <a href="registrarservicio.php?id_coche=<?php echo $id_coche; ?>&id_cliente=<?php echo $id_cliente; ?>" class="btn btn-primary">Registrar Servicio</a>
         </div>
         <br><br>
         
@@ -79,8 +79,8 @@ if ($id_coche) {
                         echo "<td>{$fila['Precio']}</td>";
                         echo "<td>{$fila['Fecha']}</td>";
                 ?>
-                        <td><a href="editarservicio.php?id_servicio=<?php echo $fila['id_servicio']; ?>&id_coche=<?php echo $id_coche; ?>" class="btn btn-warning">Editar</a></td>
-                        <td><a href="eliminarservicio.php?id_servicio=<?php echo $fila['id_servicio']; ?>&id_coche=<?php echo $id_coche; ?>" class="btn btn-danger">Eliminar</a></td>
+                        <td><a href="editarservicio.php?id_servicio=<?php echo $fila['id_servicio']; ?>&id_coche=<?php echo $id_coche; ?>&id_cliente=<?php echo $id_cliente; ?>" class="btn btn-warning">Editar</a></td>
+                        <td><a href="eliminarservicio.php?id_servicio=<?php echo $fila['id_servicio']; ?>&id_coche=<?php echo $id_coche; ?>&id_cliente=<?php echo $id_cliente; ?>" class="btn btn-danger">Eliminar</a></td>
                 <?php
                         echo "</tr>";
                     }

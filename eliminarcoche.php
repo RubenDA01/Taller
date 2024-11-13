@@ -8,7 +8,7 @@
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		
-		<title>Taller</title>
+		<title>Eliminar Coche</title>
 	</head>
 	<body>
 		<?php

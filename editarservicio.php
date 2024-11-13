@@ -55,7 +55,7 @@ $fila = $resultado->fetch_assoc();
                     <div class="form-group">
                         <label for="Precio">Precio</label>
                         <input type="text" name="Precio" id="Precio" class="form-control" 
-                               placeholder="Introduce el precio" required value="<?php echo $fila['Precio']; ?>">
+                               placeholder="Introduce el precio" step="0.01" min="0" max="99999.99" required value="<?php echo $fila['Precio']; ?>">
                     </div>
 
                     <!-- Campo para la fecha -->

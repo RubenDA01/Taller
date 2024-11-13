@@ -37,7 +37,7 @@
                     
                     <div class="form-group">
                         <label for="Precio">Precio</label>
-                        <input type="number" name="Precio" id="Precio" class="form-control" placeholder="Introduce el precio" required>
+                        <input type="number" name="Precio" id="Precio" class="form-control" placeholder="Introduce el precio" step="0.01" min="0" max="99999.99" required>
                     </div>
                     
                     <div class="form-group">

@@ -73,7 +73,7 @@ $resultado = $mysqli->query($sql);
 							echo "<td>$fila[Correo]</td>";
 					?>
 							<td><a href="coche.php?id_cliente=<?php echo $fila['id_cliente']; ?>" class="btn btn-primary">Coche</a></td>
-							<td><a href="editar.php?id_cliente=<?php echo $fila['id_cliente']; ?>" class="btn btn-warning">Editar</a></td>
+							<td><a href="editar.php?id_cliente=<?php echo $fila['id_cliente']; ?>" class="btn btn-warning bi bi-pencil-square" >Editar</a></td>
 							<td><a href="eliminar.php?id_cliente=<?php echo $fila['id_cliente']; ?>" class="btn btn-danger">Eliminar</a></td>
 					<?php							
 							echo "</tr>";

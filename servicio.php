@@ -36,7 +36,7 @@ if ($id_coche) {
     <script src="js/bootstrap.min.js" ></script>
     <script src="js/jquery.dataTables.min.js" ></script>
     
-    <title>Taller</title>
+    <title>Talleres Benito</title>
     
     <script>
         $(document).ready( function () {

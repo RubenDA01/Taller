@@ -26,7 +26,7 @@ $fila = $resultado->fetch_assoc();
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     
-    <title>Editar Coche</title>
+    <title>Talleres Benito</title>
 </head>
 <body>
     <div class="container">

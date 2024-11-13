@@ -1,0 +1,7 @@
+body {
+    background-image: url('images/fondo.jpg');
+    background-size: 100%; /* Ajusta la imagen para que cubra toda la página */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+    background-color: rgba(255, 255, 255, 0.7);
+}

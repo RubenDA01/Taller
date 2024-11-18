@@ -30,7 +30,7 @@ $fila = $resultado->fetch_assoc();
 <body>
     <div class="container">
         <div class="row">
-            <h1>Editar Cliente</h1>
+            <h1 class="text-light">Editar Cliente</h1>
         </div>
 
         <div class="row">
@@ -42,21 +42,21 @@ $fila = $resultado->fetch_assoc();
 
                     <!-- Campo para el nombre -->
                     <div class="form-group">
-                        <label for="Nombre_cliente">Nombre</label>
+                        <label for="Nombre_cliente" class="text-light">Nombre</label>
                         <input type="text" name="Nombre_cliente" id="Nombre_cliente" class="form-control" 
                                placeholder="Introduce el nombre" required value="<?php echo $fila['Nombre_cliente']; ?>">
                     </div>
 
                     <!-- Campo para el teléfono -->
                     <div class="form-group">
-                        <label for="Telefono">Teléfono</label>
+                        <label for="Telefono" class="text-light">Teléfono</label>
                         <input type="text" name="Telefono" id="Telefono" class="form-control" 
                                placeholder="Introduce el teléfono" maxlength="9" pattern="\d{9}"  required value="<?php echo $fila['Telefono']; ?>">
                     </div>
 
                     <!-- Campo para el correo -->
                     <div class="form-group">
-                        <label for="Correo">Correo</label>
+                        <label for="Correo" class="text-light">Correo</label>
                         <input type="email" name="Correo" id="Correo" class="form-control" 
                                placeholder="Introduce el correo" required value="<?php echo $fila['Correo']; ?>">
                     </div>

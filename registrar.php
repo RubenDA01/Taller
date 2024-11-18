@@ -15,7 +15,7 @@
 	<body>
 		<div class="container">
 			<div class="row">
-				<h1>Clientes</h1>
+				<h1 class="text-light">Clientes</h1>
 			</div>
 			
 			<div class="row">
@@ -30,19 +30,19 @@
 						
 						<div class="form-group">
 							<!-- Nombre -->
-							<label for="nombre">Nombre</label>
+							<label for="nombre" class="text-light">Nombre</label>
 							<input type="text" name="Nombre_cliente" id="Nombre_cliente" class="form-control" placeholder="Introduce el nombre" required>
 						</div>
 						<!-- Este es el campo de entrada para el número de teléfono, solo acepta 9 dígitos con el pattern -->
 						<div class="form-group">
 							<!-- Teléfono -->
-							<label for="Telefono">Teléfono</label>
+							<label for="Telefono" class="text-light">Teléfono</label>
 							<input type="text" name="Telefono" id="Telefono" class="form-control" placeholder="Introduce el teléfono" maxlength="9" pattern="\d{9}" required>
 						</div>
 						
 						<div class="form-group">
 							<!-- Nombre -->
-							<label for="nombre">Correo</label>
+							<label for="nombre" class="text-light">Correo</label>
 							<input type="email" name="Correo" id="Correo" class="form-control" placeholder="Introduce el correo" required>
 						</div>
 						

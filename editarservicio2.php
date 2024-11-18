@@ -31,18 +31,32 @@
 
         // Ejecutar la sentencia
         if ($mysqli->query($sql) === TRUE) {
-            echo '<br><p class="alert alert-primary">SERVICIO MODIFICADO</p>';
+
+            echo "<br>
+            <div class='alert alert-success text-center' role='alert'>
+				<strong>Éxito:</strong> El servicio ha sido modificado correctamente.
+				<br>
+			</div>";
+            ?>
+            <p><a href="servicio.php?id_coche=<?php echo $id_coche; ?>&id_cliente=<?php echo $id_cliente; ?>" class="btn btn-success">Regresar</a></p>
+            <?php
+
         } else {
-            echo '<br><p class="alert alert-danger">ERROR AL MODIFICAR EL SERVICIO</p>';
+
+            echo "<br>
+            <div class='alert alert-success text-center' role='alert'>
+				<strong>Error:</strong> Ha habido un error al modificar el servicio.
+				<br>
+			</div>";
+            ?>
+            <p><a href="servicio.php?id_coche=<?php echo $id_coche; ?>&id_cliente=<?php echo $id_cliente; ?>" class="btn btn-danger">Regresar</a></p>
+            <?php
+
         }
     } else {
         echo '<br><p class="alert alert-danger">Faltan datos para actualizar el servicio</p>';
     }
     ?>
-
-    <br>
-    <!-- Enlace para regresar a la lista de servicios del coche específico -->
-    <p><a href="servicio.php?id_coche=<?php echo $id_coche; ?>&id_cliente=<?php echo $id_cliente; ?>" class="btn btn-primary">Regresar</a></p>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

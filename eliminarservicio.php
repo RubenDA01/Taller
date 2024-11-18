@@ -32,18 +32,21 @@
         if($resultadoBorrar > 0){
     ?>
             <br>
-            <p class="alert alert-primary">SERVICIO ELIMINADO</p>
+				<div class='alert alert-success text-center' role='alert'>
+				<strong>Éxito:</strong> Servicio eliminado correctamente.
+				</div>
+                <p><a href="servicio.php?id_coche=<?php echo $id_coche; ?>&id_cliente=<?php echo $id_cliente; ?>" class="btn btn-success">Regresar</a></p>
     <?php
         } else {
     ?>
             <br>
-            <p class="alert alert-danger">ERROR: Servicio no eliminado</p>
+				<div class='alert alert-danger text-center' role='alert'>
+				<strong>Error:</strong> Ha habido un error al eliminar el servicio.
+				</div>
+				<p><a href="servicio.php?id_coche=<?php echo $id_coche; ?>&id_cliente=<?php echo $id_cliente; ?>" class="btn btn-danger">Regresar</a></p>
     <?php
         }
     ?>
-    <br>
-    <!-- Enlace para regresar a la lista de servicios del coche actual, incluyendo id_cliente -->
-    <p><a href="servicio.php?id_coche=<?php echo $id_coche; ?>&id_cliente=<?php echo $id_cliente; ?>" class="btn btn-primary">Regresar</a></p>
 
 </body>
 </html>

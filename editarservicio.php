@@ -34,7 +34,7 @@ $fila = $resultado->fetch_assoc();
 <body>
     <div class="container">
         <div class="row">
-            <h1>Editar Servicio</h1>
+            <h1 class="text-light">Editar Servicio</h1>
         </div>
 
         <div class="row">
@@ -48,21 +48,21 @@ $fila = $resultado->fetch_assoc();
 
                     <!-- Campo para el tipo de servicio -->
                     <div class="form-group">
-                        <label for="Tipo_servicio">Tipo de Servicio</label>
+                        <label for="Tipo_servicio" class="text-light">Tipo de Servicio</label>
                         <input type="text" name="Tipo_servicio" id="Tipo_servicio" class="form-control" 
                                placeholder="Introduce el tipo de servicio" required value="<?php echo $fila['Tipo_servicio']; ?>">
                     </div>
 
                     <!-- Campo para el precio -->
                     <div class="form-group">
-                        <label for="Precio">Precio</label>
+                        <label for="Precio" class="text-light">Precio</label>
                         <input type="text" name="Precio" id="Precio" class="form-control" 
                                placeholder="Introduce el precio" step="0.01" min="0" max="99999.99" required value="<?php echo $fila['Precio']; ?>">
                     </div>
 
                     <!-- Campo para la fecha -->
                     <div class="form-group">
-                        <label for="Fecha">Fecha</label>
+                        <label for="Fecha" class="text-light">Fecha</label>
                         <input type="date" name="Fecha" id="Fecha" class="form-control" 
                                required value="<?php echo $fila['Fecha']; ?>">
                     </div>

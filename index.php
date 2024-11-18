@@ -15,7 +15,7 @@ $resultado = $mysqli->query($sql);
 		<!-- Required meta tags -->
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css"> -->
     	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
    		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.css">
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
@@ -61,7 +61,7 @@ $resultado = $mysqli->query($sql);
 			<br>
 			<br>
 			
-			<table id="tabla" class="table table-striped table-bordered" style="width:100%">
+			<table id="tabla" class="table table-bordered border-light" style="width:100%">
 				<thead class="table table-dark table-striped">
 					<tr>
 						<th class="text-light" >Id</th>

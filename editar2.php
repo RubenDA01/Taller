@@ -29,17 +29,24 @@
 
         // Ejecutar la sentencia
         if ($mysqli->query($sql) === TRUE) {
-            echo '<br><p class="alert alert-primary">REGISTRO MODIFICADO</p>';
+            echo "<br>
+            <div class='alert alert-success text-center' role='alert'>
+				<strong>Éxito:</strong> El cliente ha sido modificado correctamente.
+				<br>
+			</div>
+            <p><a href='index.php' class='btn btn-success'>Regresar</a></p>";
         } else {
-            echo '<br><p class="alert alert-danger">ERROR AL MODIFICAR EL REGISTRO</p>';
+            echo "<br>
+            <div class='alert alert-success text-center' role='alert'>
+				<strong>Error:</strong> Ha habido un error al modificar el cliente.
+				<br>
+			</div>
+            <p><a href='index.php' class='btn btn-danger>Regresar</a></p>";
         }
     } else {
         echo '<br><p class="alert alert-danger">Faltan datos para actualizar el registro</p>';
     }
     ?>
-
-    <br>
-    <p><a href="index.php" class="btn btn-primary">Regresar</a></p>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

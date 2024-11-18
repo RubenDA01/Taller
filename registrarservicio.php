@@ -21,7 +21,7 @@
     
     <div class="container">
         <div class="row">
-            <h1>Registrar Servicio</h1>
+            <h1 class="text-light">Registrar Servicio</h1>
         </div>
         
         <div class="row">
@@ -33,17 +33,17 @@
                     <input type="hidden" name="id_cliente" value="<?php echo $id_cliente; ?>">
 
                     <div class="form-group">
-                        <label for="Tipo_Servicio">Tipo de Servicio</label>
+                        <label for="Tipo_Servicio" class="text-light">Tipo de Servicio</label>
                         <input type="text" name="Tipo_Servicio" id="Tipo_Servicio" class="form-control" placeholder="Introduce el tipo de servicio" required>
                     </div>
                     
                     <div class="form-group">
-                        <label for="Precio">Precio</label>
+                        <label for="Precio" class="text-light">Precio</label>
                         <input type="number" name="Precio" id="Precio" class="form-control" placeholder="Introduce el precio" step="0.01" min="0" max="99999.99" required>
                     </div>
                     
                     <div class="form-group">
-                        <label for="Fecha">Fecha</label>
+                        <label for="Fecha" class="text-light">Fecha</label>
                         <input type="date" name="Fecha" id="Fecha" class="form-control" required>
                     </div>
                     

@@ -35,17 +35,27 @@
             $resultado = $mysqli->query($sql);
 
             if ($resultado) {
-                echo '<br><p class="alert alert-primary">REGISTRO AGREGADO</p>';
+                echo '<br>
+				<div class="alert alert-success text-center" role="alert">
+				<strong>Éxito:</strong> El coche ha sido registrado correctamente
+				</div>'
+				?>
+                <p><a href="coche.php?id_cliente=<?php echo $id_cliente; ?>" class="btn btn-success">Regresar</a></p>;
+                <?php
             } else {
-                echo '<br><p class="alert alert-danger">REGISTRO NO AGREGADO</p>';
+                echo '<br>
+				<div class="alert alert-danger text-center" role="alert">
+				<strong>Error:</strong> Ha ocurrido un error al registrar el coche.
+				</div>'
+                ?>
+                <p><a href="coche.php?id_cliente=<?php echo $id_cliente; ?>" class="btn btn-danger">Regresar</a></p>;
+                <?php
             }
         } else {
             // Si el cliente no existe, muestra un mensaje de error
             echo '<br><p class="alert alert-danger">ERROR: Cliente no encontrado. Registro no agregado.</p>';
         }
     ?>
-    <br>
-    <!-- Enlace para regresar a la lista de coches del cliente actual -->
-    <p><a href="coche.php?id_cliente=<?php echo $id_cliente; ?>" class="btn btn-primary">Regresar</a></p>
+
 </body>
 </html>

@@ -31,18 +31,23 @@
 			if($resultado>0){
 		?>
 				<br>
-				<p class="alert alert-primary">REGISTRO AGREGADO</p>
+				<div class='alert alert-success text-center' role='alert'>
+				<strong>Éxito:</strong> El cliente ha sido registrado correctamente
+				</div>
+				<p><a href="index.php" class="btn btn-success">Regresar</a></p>
   					
 
 		<?php
 			} else {
 		?>
 				<br>
-  				<p class="alert alert-danger">REGISTRO NO AGREGADO</p>
+				<div class='alert alert-danger text-center' role='alert'>
+				<strong>Error:</strong> Ha ocurrido un error al registrar el cliente.
+				</div>
+				<p><a href="index.php" class="btn btn-danger">Regresar</a></p>
 		<?php		
 			}
 		?>
-			<br>
-			<p><a href="index.php" class="btn btn-primary">Regresar</a></p>
+
 	</body>
 </html>

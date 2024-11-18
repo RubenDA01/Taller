@@ -29,17 +29,21 @@
 			if($resultadoBorrar>0){
 		?>
 				<br>
-				<p class="alert alert-primary">REGISTRO ELIMINADO</p>
+				<div class='alert alert-success text-center' role='alert'>
+				<strong>Éxito:</strong> Coche eliminado correctamente.
+				</div>
+				<p><a href="coche.php?id_cliente=<?php echo $id_cliente; ?>" class="btn btn-success">Regresar</a></p>
 		<?php
 			} else {
 		?>
 				<br>
-				<p class="alert alert-danger">REGISTRO NO ELIMINADO</p>
+				<div class='alert alert-danger text-center' role='alert'>
+				<strong>Error:</strong> Ha habido un error al eliminar el coche.
+				</div>
+				<p><a href="coche.php?id_cliente=<?php echo $id_cliente; ?>" class="btn btn-danger">Regresar</a></p>
 		<?php
 			}
 		?>
-			<br>
-			<p><a href="coche.php?id_cliente=<?php echo $id_cliente; ?>" class="btn btn-primary">Regresar</a></p>
 
 	</body>
 </html>

@@ -36,9 +36,21 @@
             $resultado = $mysqli->query($sql);
 
             if ($resultado) {
-                echo '<br><p class="alert alert-primary">SERVICIO AGREGADO</p>';
+                echo '<br>
+				<div class="alert alert-success text-center" role="alert">
+				<strong>Éxito:</strong> El servicio ha sido registrado correctamente
+				</div>'
+				?>
+                <p><a href="servicio.php?id_coche=<?php echo $id_coche; ?>&id_cliente=<?php echo $id_cliente; ?>" class="btn btn-success">Regresar</a></p>;
+                <?php
             } else {
-                echo '<br><p class="alert alert-danger">ERROR: Servicio no agregado</p>';
+                echo '<br>
+				<div class="alert alert-danger text-center" role="alert">
+				<strong>Error:</strong> Ha ocurrido un error al registrar el servicio.
+				</div>'
+                ?>
+                <p><a href="servicio.php?id_coche=<?php echo $id_coche; ?>&id_cliente=<?php echo $id_cliente; ?>" class="btn btn-danger">Regresar</a></p>;
+                <?php
             }
         } else {
             // Si el coche no existe, muestra un mensaje de error
@@ -46,7 +58,6 @@
         }
     ?>
     <br>
-    <!-- Enlace para regresar a la lista de servicios del coche actual -->
-    <p><a href="servicio.php?id_coche=<?php echo $id_coche; ?>&id_cliente=<?php echo $id_cliente; ?>" class="btn btn-primary">Regresar</a></p>
+
 </body>
 </html>

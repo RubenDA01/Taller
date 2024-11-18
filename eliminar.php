@@ -4,12 +4,16 @@
 		<!-- Required meta tags -->
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" href="estilos.css">
-		<link rel="icon" href="images/icono.png" type="image/png">
-		
-		<!-- Bootstrap CSS -->
+
 		<link rel="stylesheet" href="css/bootstrap.min.css">
-		
+		<link rel="stylesheet" href="estilos.css">
+		<link rel="stylesheet" href="css/jquery.dataTables.min.css">
+		<link rel="icon" href="images/icono.png" type="image/png">
+
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.dataTables.min.js"></script>
+			
 		<title>Talleres Benito</title>
 	</head>
 	<body>
@@ -28,17 +32,20 @@
 			if($resultadoBorrar>0){
 		?>
 				<br>
-				<p class="alert alert-primary">REGISTRO ELIMINADO</p>
+				<div class='alert alert-success text-center' role='alert'>
+				<strong>Éxito:</strong> Cliente eliminado correctamente.
+				</div>
+				<p><a href="index.php" class="btn btn-success">Regresar</a></p>
 		<?php
 			} else {
 		?>
 				<br>
-				<p class="alert alert-danger">REGISTRO NO ELIMINADO</p>
+				<div class='alert alert-danger text-center' role='alert'>
+				<strong>Error:</strong> Ha habido un error al eliminar el cliente.
+				</div>
+				<p><a href="index.php" class="btn btn-danger">Regresar</a></p>
 		<?php
 			}
 		?>
-			<br>
-			<p><a href="index.php" class="btn btn-primary">Regresar</a></p>
-
 	</body>
 </html>

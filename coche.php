@@ -25,6 +25,7 @@ if ($id_cliente) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" href="images/icono.png" type="image/png">
     
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">

@@ -16,6 +16,7 @@ $resultado = $mysqli->query($sql);
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="stylesheet" href="estilos.css">
+		<link rel="icon" href="images/icono.png" type="image/png">
 
 		
 		<!-- Bootstrap CSS -->
@@ -41,7 +42,7 @@ $resultado = $mysqli->query($sql);
 	<body>
 		<div class="container">
 			<div class="row">
-				<h1>Clientes</h1>
+				<h1 class="text-light">Coches</h1>
 			</div>
 			<br>
 			
@@ -54,10 +55,10 @@ $resultado = $mysqli->query($sql);
 			<table id="tabla" class="display" style="width:100%">
 				<thead>
 					<tr>
-						<th>Id</th>
-						<th>Nombre</th>
-						<th>Teléfono</th>
-						<th>Correo</th>
+						<th class="text-light" >Id</th>
+						<th class="text-light" >Nombre</th>
+						<th class="text-light" >Teléfono</th>
+						<th class="text-light" >Correo</th>
 						<th></th>
 						<th></th>
 						<th></th>
@@ -73,7 +74,7 @@ $resultado = $mysqli->query($sql);
 							echo "<td>$fila[Correo]</td>";
 					?>
 							<td><a href="coche.php?id_cliente=<?php echo $fila['id_cliente']; ?>" class="btn btn-primary">Coche</a></td>
-							<td><a href="editar.php?id_cliente=<?php echo $fila['id_cliente']; ?>" class="btn btn-warning bi bi-pencil-square" >Editar</a></td>
+							<td><a href="editar.php?id_cliente=<?php echo $fila['id_cliente']; ?>" class="btn btn-warning"><i class="bi bi-plus-lg"></i>Editar</a></td>
 							<td><a href="eliminar.php?id_cliente=<?php echo $fila['id_cliente']; ?>" class="btn btn-danger">Eliminar</a></td>
 					<?php							
 							echo "</tr>";

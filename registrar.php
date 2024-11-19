@@ -15,7 +15,7 @@
 	<body>
 		<div class="container">
 			<div class="row">
-				<h1 class="text-light">Clientes</h1>
+				<h1 class="text-light">Registrar Clientes</h1>
 			</div>
 			
 			<div class="row">

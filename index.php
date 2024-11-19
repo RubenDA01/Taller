@@ -51,7 +51,7 @@ $resultado = $mysqli->query($sql);
 	<body>
 		<div class="container">
 			<div class="row">
-				<h1 class="text-light">Coches</h1>
+				<h1 class="text-light">Clientes</h1>
 			</div>
 			<br>
 			

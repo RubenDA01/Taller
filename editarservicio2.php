@@ -23,6 +23,18 @@
         $Precio = $_GET['Precio'];               // Obtener el precio
         $Fecha = $_GET['Fecha'];                 // Obtener la fecha
 
+        // Validación en PHP para evitar números negativos en el precio
+        if ($Precio < 0) {
+            echo "<br>
+            <div class='alert alert-danger text-center' role='alert'>
+                <strong>Error:</strong> El precio no puede ser negativo. Por favor, ingresa un valor válido.
+            </div>";
+            ?>
+            <p><a href="servicio.php?id_coche=<?php echo $id_coche; ?>&id_cliente=<?php echo $id_cliente; ?>" class="btn btn-danger">Regresar</a></p>
+            <?php
+            exit;
+        }
+
         // Establecer la conexión
         require 'conexion.php';
 
@@ -34,9 +46,9 @@
 
             echo "<br>
             <div class='alert alert-success text-center' role='alert'>
-				<strong>Éxito:</strong> El servicio ha sido modificado correctamente.
-				<br>
-			</div>";
+                <strong>Éxito:</strong> El servicio ha sido modificado correctamente.
+                <br>
+            </div>";
             ?>
             <p><a href="servicio.php?id_coche=<?php echo $id_coche; ?>&id_cliente=<?php echo $id_cliente; ?>" class="btn btn-success">Regresar</a></p>
             <?php
@@ -44,10 +56,10 @@
         } else {
 
             echo "<br>
-            <div class='alert alert-success text-center' role='alert'>
-				<strong>Error:</strong> Ha habido un error al modificar el servicio.
-				<br>
-			</div>";
+            <div class='alert alert-danger text-center' role='alert'>
+                <strong>Error:</strong> Ha habido un error al modificar el servicio.
+                <br>
+            </div>";
             ?>
             <p><a href="servicio.php?id_coche=<?php echo $id_coche; ?>&id_cliente=<?php echo $id_cliente; ?>" class="btn btn-danger">Regresar</a></p>
             <?php
@@ -64,3 +76,4 @@
     <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
+

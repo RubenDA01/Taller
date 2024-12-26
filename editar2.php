@@ -24,24 +24,37 @@
         // Establecer la conexión
         require 'conexion.php';
 
-        // Preparar la sentencia SQL para la actualización
-        $sql = "UPDATE cliente SET Nombre_cliente='$Nombre_cliente', Telefono='$Telefono', Correo='$Correo' WHERE id_cliente=$id";
+        // Verificar si el correo ya existe y pertenece a otro cliente
+        $verificarCorreo = $mysqli->query("SELECT id_cliente FROM cliente WHERE Correo = '$Correo' AND id_cliente != '$id'");
 
-        // Ejecutar la sentencia
-        if ($mysqli->query($sql) === TRUE) {
+        if ($verificarCorreo->num_rows > 0) {
+            // Si el correo ya está registrado por otro cliente, mostrar error
             echo "<br>
-            <div class='alert alert-success text-center' role='alert'>
-				<strong>Éxito:</strong> El cliente ha sido modificado correctamente.
-				<br>
-			</div>
-            <p><a href='index.php' class='btn btn-success'>Regresar</a></p>";
+            <div class='alert alert-danger text-center' role='alert'>
+                <strong>Error:</strong> El correo ya está registrado por otro cliente. Por favor, usa otro correo.
+                <br>
+            </div>
+            <p><a href='index.php' class='btn btn-danger'>Regresar</a></p>";
         } else {
-            echo "<br>
-            <div class='alert alert-success text-center' role='alert'>
-				<strong>Error:</strong> Ha habido un error al modificar el cliente.
-				<br>
-			</div>
-            <p><a href='index.php' class='btn btn-danger>Regresar</a></p>";
+            // Si el correo no está registrado, proceder con la actualización
+            $sql = "UPDATE cliente SET Nombre_cliente='$Nombre_cliente', Telefono='$Telefono', Correo='$Correo' WHERE id_cliente=$id";
+
+            // Ejecutar la sentencia
+            if ($mysqli->query($sql) === TRUE) {
+                echo "<br>
+                <div class='alert alert-success text-center' role='alert'>
+                    <strong>Éxito:</strong> El cliente ha sido modificado correctamente.
+                    <br>
+                </div>
+                <p><a href='index.php' class='btn btn-success'>Regresar</a></p>";
+            } else {
+                echo "<br>
+                <div class='alert alert-danger text-center' role='alert'>
+                    <strong>Error:</strong> Ha habido un error al modificar el cliente.
+                    <br>
+                </div>
+                <p><a href='index.php' class='btn btn-danger'>Regresar</a></p>";
+            }
         }
     } else {
         echo '<br><p class="alert alert-danger">Faltan datos para actualizar el registro</p>';

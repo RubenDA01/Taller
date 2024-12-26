@@ -39,8 +39,17 @@
                     
                     <div class="form-group">
                         <label for="Precio" class="text-light">Precio</label>
-                        <input type="number" name="Precio" id="Precio" class="form-control" placeholder="Introduce el precio" step="0.01" min="0" max="99999.99" required>
+                        <input type="number" name="Precio" id="Precio" class="form-control" placeholder="Introduce el precio" step="0.01" min="0" max="99999.99" required oninput="validarPrecio(this)">
                     </div>
+
+                    <script>
+                        function validarPrecio(input) {
+                            if (input.value < 0) {
+                                alert("El precio no puede ser negativo.");
+                                input.value = ''; // Limpia el valor si es negativo
+                            }
+                        }
+                    </script>
                     
                     <div class="form-group">
                         <label for="Fecha" class="text-light">Fecha</label>
